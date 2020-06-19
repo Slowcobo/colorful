@@ -8,7 +8,6 @@ function App() {
       <Palette {...seedPalettes[4]} />
     </div>
   );
-  !W;
 }
 
 export default App;
