@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { withStyles } from "@material-ui/styles";
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 import Snackbar from "@material-ui/core/Snackbar";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 import Slider from "rc-slider";
-import { withStyles } from "@material-ui/styles";
 import "rc-slider/assets/index.css";
 import styles from "./styles/NavbarStyles";
 
@@ -20,6 +20,7 @@ class Navbar extends Component {
     this.changeFormat = this.changeFormat.bind(this);
     this.closeSnackbar = this.closeSnackbar.bind(this);
   }
+
   changeFormat(e) {
     this.setState({
       format: e.target.value,
@@ -27,16 +28,19 @@ class Navbar extends Component {
     });
     this.props.handleChange(e.target.value);
   }
+
   closeSnackbar() {
     this.setState({ open: false });
   }
+
   render() {
     const { level, changeLevel, isSingleColor, classes } = this.props;
     const { format } = this.state;
+
     return (
       <header className={classes.Navbar}>
         <div className={classes.logo}>
-          <Link to="/">colors</Link>
+          <Link to="/">colorful</Link>
         </div>
         {!isSingleColor && (
           <div>

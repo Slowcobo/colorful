@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import Button from "@material-ui/core/Button";
 import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
 import { ChromePicker } from "react-color";
 import { withStyles } from "@material-ui/styles";
+import Button from "@material-ui/core/Button";
 import styles from "./styles/ColorPickerFormStyles";
 
 class ColorPickerForm extends Component {
@@ -85,7 +85,7 @@ class ColorPickerForm extends Component {
             style={{
               backgroundColor: paletteIsFull
                 ? "rgba(0, 0, 0, 0.12)"
-                : this.state.currentColor,
+                : currentColor,
             }}
           >
             {paletteIsFull ? "Palette Full" : "Add Color"}

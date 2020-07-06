@@ -1,16 +1,16 @@
 import React, { Component } from "react";
-import classNames from "classnames";
 import { withStyles } from "@material-ui/core/styles";
-import NewPaletteFormNav from "./NewPaletteFormNav";
-import ColorPickerForm from "./ColorPickerForm";
+import classNames from "classnames";
 import Drawer from "@material-ui/core/Drawer";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 import IconButton from "@material-ui/core/IconButton";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import Button from "@material-ui/core/Button";
-import DraggableColorList from "./DraggableColorList";
 import arrayMove from "array-move";
+import NewPaletteFormNav from "./NewPaletteFormNav";
+import ColorPickerForm from "./ColorPickerForm";
+import DraggableColorList from "./DraggableColorList";
 import styles from "./styles/NewPaletteFormStyles";
 
 class NewPaletteForm extends Component {
@@ -57,7 +57,7 @@ class NewPaletteForm extends Component {
       .flat();
     const rand = Math.floor(Math.random() * allColors.length);
     const randomColor = allColors[rand];
-    //TODO: Prevent duplicate colors from being added
+
     this.setState({ colors: [...this.state.colors, randomColor] });
   };
 

@@ -11,11 +11,13 @@ class ColorBox extends Component {
     this.state = { showOverlay: false };
     this.changeOverlayState = this.changeOverlayState.bind(this);
   }
+
   changeOverlayState() {
     this.setState({ showOverlay: true }, () => {
       setTimeout(() => this.setState({ showOverlay: false }), 1500);
     });
   }
+
   render() {
     const {
       name,
@@ -41,7 +43,7 @@ class ColorBox extends Component {
             })}
           >
             <h1>copied!</h1>
-            <p className={classes.copyText}>{this.props.background}</p>
+            <p className={classes.copyText}>{background}</p>
           </div>
           <div>
             <div className={classes.boxContent}>

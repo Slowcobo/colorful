@@ -1,9 +1,9 @@
 import React, { Component } from "react";
+import { withStyles } from "@material-ui/styles";
 import ColorBox from "./ColorBox";
 import Navbar from "./Navbar";
 import PaletteFooter from "./PaletteFooter";
 import styles from "./styles/PaletteStyles";
-import { withStyles } from "@material-ui/styles";
 
 class Palette extends Component {
   constructor(props) {
@@ -12,14 +12,17 @@ class Palette extends Component {
     this.changeLevel = this.changeLevel.bind(this);
     this.changeFormat = this.changeFormat.bind(this);
   }
+
   changeLevel(level) {
     this.setState({
       level,
     });
   }
+
   changeFormat(val) {
     this.setState({ format: val });
   }
+
   render() {
     const { classes } = this.props;
     const { colors, paletteName, emoji, id } = this.props.palette;
@@ -33,10 +36,11 @@ class Palette extends Component {
         showingFullPalette
       />
     ));
+
     return (
       <div className={classes.Palette}>
         <Navbar
-          level={this.state.level}
+          level={level}
           changeLevel={this.changeLevel}
           handleChange={this.changeFormat}
           isSingleColor={false}
