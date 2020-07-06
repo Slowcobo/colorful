@@ -40,15 +40,21 @@ export default {
   },
   copyText: {
     color: (props) =>
-      chroma(props.background).luminance() >= 0.7 ? "rgba(0,0,0,0.5)" : "#fff",
+      chroma(props.background).luminance() >= 0.7
+        ? "rgba(0, 0, 0, 0.5)"
+        : "rgba(255, 255, 255, 0.8)",
   },
   colorName: {
     color: (props) =>
-      chroma(props.background).luminance() <= 0.08 ? "#fff" : "rgba(0,0,0,0.5)",
+      chroma(props.background).luminance() <= 0.08
+        ? "rgba(255, 255, 255, 0.8)"
+        : "rgba(0, 0, 0, 0.5)",
   },
   seeMore: {
     color: (props) =>
-      chroma(props.background).luminance() >= 0.7 ? "rgba(0,0,0,0.5)" : "#fff",
+      chroma(props.background).luminance() >= 0.7
+        ? "rgba(0,0,0,0.5)"
+        : "rgba(255, 255, 255, 0.8)",
     backgroundColor: "rgba(255, 255, 255, 0.3)",
     position: "absolute",
     border: "none",
@@ -96,7 +102,7 @@ export default {
     transition: "transform 0.6s ease-in-out",
   },
   copyMessage: {
-    color: "white",
+    color: "#fff",
     position: "fixed",
     left: "0",
     right: "0",
